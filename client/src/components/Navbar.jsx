@@ -78,6 +78,9 @@ const Navbar = () => {
                     {" "}
                     <Link to="profile">Edit Profile</Link>{" "}
                   </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link to="performance">Performance</Link>
+                  </DropdownMenuItem>
                   <DropdownMenuItem onClick={logoutHandler}>
                     Log out
                   </DropdownMenuItem>
@@ -98,6 +101,12 @@ const Navbar = () => {
               <Button onClick={() => navigate("/login")}>Signup</Button>
             </div>
           )}
+          {user?.role === "student" && (
+          <Button variant="ghost">
+            <Link to="/ask-bot">Ask Bot</Link>
+          </Button>
+          )}
+
           <DarkMode />
         </div>
       </div>
@@ -135,6 +144,13 @@ const MobileNavbar = ({user}) => {
         <nav className="flex flex-col space-y-4">
           <Link to="/my-learning">My Learning</Link>
           <Link to="/profile">Edit Profile</Link>
+          {user?.role === "student" && (
+            <>
+              <Link to="/ask-bot">Ask Bot</Link>
+              <Link to="/performance">Performance</Link>
+            </>
+          )}
+
           <p>Log out</p>
         </nav>
         {user?.role === "instructor" && (

@@ -104,19 +104,6 @@ const Dashboard = () => {
             </CardHeader>
             <CardContent>
               <p className="text-blue-600 font-bold">Enrolled Students: {enrolledCount}</p>
-
-              {/* Show enrolled students */}
-              {enrolledCount > 0 ? (
-                <ul className="mt-2">
-                  {enrolledStudents.map((student) => (
-                    <li key={`${course._id}-${student?.studentId || Math.random()}`} className="text-sm text-gray-500">
-                      {student?.studentName || "Unnamed Student"}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-gray-500">No students enrolled yet.</p>
-              )}
             </CardContent>
           </Card>
         );

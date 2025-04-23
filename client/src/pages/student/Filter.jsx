@@ -12,6 +12,10 @@ import {
 import { Separator } from "@/components/ui/separator";
 import React, { useState } from "react";
 
+{/* <SelectItem value="CyberSecurity">Cyber security</SelectItem>
+                <SelectItem value="UI/UX">UI/UX Design</SelectItem>
+                <SelectItem value="Cloud">Cloud Computing</SelectItem> */}
+
 const categories = [
   { id: "Next JS", label: "Next JS" },
   { id: "Data Science", label: "Data Science" },
@@ -27,6 +31,11 @@ const categories = [
   { id: "Docker", label: "Docker" },
   { id: "MongoDB", label: "MongoDB" },
   { id: "HTML", label: "HTML" },
+  { id: "CyberSecurity", label: "Cyber Security" },
+  { id: "UI/UX", label: "UI/UX" },
+  { id: "Cloud", label: "Cloud Computing" },
+  
+
   
 ];
 
